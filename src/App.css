@@ -3,7 +3,7 @@
   height: 100vh;
   display: grid;
   gap: 2px;
-  grid-template-columns:repeat(2, 400px 150px);
+  grid-template-columns:repeat(2, 550px 150px);
   grid-template-rows: repeat(3, 250px 50px 50px) ;
 }
 .container>*{
