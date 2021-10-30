@@ -14,7 +14,7 @@ function App() {
 
   const handleChange = ({ target: { value } }) => {
     value.length === validNumber && validateValue(value);
-    setForm(value);
+    value.length <= validNumber && setForm(value);
   };
 
   return (
