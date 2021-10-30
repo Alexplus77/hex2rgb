@@ -1,9 +1,8 @@
-import "./App.css";
 import React, { useState } from "react";
-import hexToRgb from "hex-to-rgb";
+import Converter from "./components/converter";
 
 function App() {
-  const error = "Ошибка";
+  const error = "Ошибка!!!";
   const validNumber = 7;
 
   const [form, setForm] = useState("");
@@ -19,18 +18,13 @@ function App() {
   };
 
   return (
-    <div
-      className="App"
-      style={valid ? { background: `${valid}` } : { background: "#ff0000" }}
-    >
-      <form>
-        <input name="backgroundColor" value={form} onChange={handleChange} />
-        <input
-          name="output"
-          readOnly={true}
-          value={valid ? `rgb (${hexToRgb(valid)})` : error}
-        />
-      </form>
+    <div>
+      <Converter
+        form={form}
+        valid={valid}
+        handleChange={handleChange}
+        error={error}
+      />
     </div>
   );
 }
