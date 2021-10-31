@@ -4,10 +4,7 @@ import hexToRgb from "hex-to-rgb";
 
 const Converter = ({ valid, error, form, handleChange }) => {
   return (
-    <div
-      className="container"
-      style={valid ? { background: `${valid}` } : { background: "#ff0000" }}
-    >
+    <div className="container">
       <input
         className="input"
         name="backgroundColor"

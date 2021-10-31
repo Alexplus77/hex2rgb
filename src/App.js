@@ -18,7 +18,10 @@ function App() {
   };
 
   return (
-    <div>
+    <div
+      className="App"
+      style={valid ? { background: `${valid}` } : { background: "#ff0000" }}
+    >
       <Converter
         form={form}
         valid={valid}
